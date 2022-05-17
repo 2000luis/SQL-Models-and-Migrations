@@ -58,4 +58,17 @@ _____________________________________________________________
     <!-- El NOT NULL especifica que ese parametro no puede estar vacio siempre debe contener informacion -->
 
     <!-- El AUTOINCREMENT asegura que ya no sera nesecario escribir un nuevo id  -->
+_____________________________________________________________
 
+Constraints
+-------------------------------------------------------------
+*CHECK
+    revisar que se cumpla una cierta condicion
+*DEFAULT
+    agregar un valor por defecto
+*NOT NULL
+    Que el resultado no puede estar vacio
+*PRIMARY KEY 
+    Es para saber de que columna ubicar los elementos
+*UNIQUE
+    para asegurar que todos los valores sean unicos y que no alla repeticion
