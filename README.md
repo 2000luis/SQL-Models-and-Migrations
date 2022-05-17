@@ -15,21 +15,47 @@ Database Management Systems
     *VARCHAR(size)
         Con este tipo de dato puedes especificar un rango del tamaño de caracteres que vas a usar
     *SMALLINT(size)
-        Cualquier numero entero mas los numeros negativos
+        Para un numero pequeño
     *INT
-        numeros decimales
+        Para un numero mediano
     *BIGINT
+        Para un numero demasiado grande
     *FLOAT
+        Para numeros decimales 
     *DOUBLE
+        Numeros decimales mas 
 *SQLite
     Tiene una lista corta de tipos de datos que soporta
-    *Text
+    *TEXT
         texto simple, Strings
-    *Numeric
+    *NUMERIC
         boolean operaciones
-    *Integer
+    *INTEGER
         Cualquier numero entero mas los numeros negativos
-    *Real
+    *REAL
         numeros decimales
-    *Blob
+    *BLOB
         Cualquier numero binario que con tenga 0s y 1s que podria ser musica, fotos, videos, etc.
+_____________________________________________________________
+
+<!-- Ejemplo de como Escribir una table de vuelos -->
+
+    <!-- Se con la palabra clave CREATE TABLE despues se le da un nombre a esa tabla en este caso Flight -->
+    CREATE TABLE flights (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        origin TEXT NOT NULL,
+        destination TEXT NOT NULL,
+        duration INTEGER NOT NULL
+    );
+
+    <!-- Despues se especifica todas las columnas que van a estar presentes en la tabla -->
+
+    <!-- En este caso son id, origin, destination, duration.
+    Despues se especifica que tipo de dato va hacer en este caso INTEGER, TEXT, TEXT, INTEGER. -->
+
+    <!-- Despues esta la forma en la que se va a poder ubicar algo en especifica de esa columnas usando PRIMARY KEY. -->
+
+    <!-- El NOT NULL especifica que ese parametro no puede estar vacio siempre debe contener informacion -->
+
+    <!-- El AUTOINCREMENT asegura que ya no sera nesecario escribir un nuevo id  -->
+
