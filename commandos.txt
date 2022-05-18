@@ -1,0 +1,50 @@
+INSERT INTO flights (origin, destino, duracion) VALUES ('Tepa', 'Rosario', 100);
+
+###se usan '' en git bash
+
+###puedes usar el 
+SELECT * FROM flights WHERE duracion > 100;
+
+SELECT * FROM flights WHERE duracion > 200 OR destino = 'New York';
+
+
+.mode columns 
+ver estaticamente mejor las tablas
+
+.headers on 
+para ver los headers
+
+###principal tabla
+SELECT * FROM flights;
+id  origin    destino  duracion
+--  --------  -------  --------
+1   New York  London   415
+2   New York  London   415
+3   Actopan   Ixmi     30
+4   Tepa      Rosario  160
+
+
+
+SELECT * FROM flights WHERE duracion > 200 AND destino = 'London';
+esto te regresa esto de be complir con los dos requerimentos si no no regresa nada
+
+id  origin    destino  duracion
+--  --------  -------  --------
+1   New York  London   415
+2   New York  London   415
+
+
+
+SELECT * FROM flights WHERE origin IN ('New York', 'Tepa');
+id  origin    destino  duracion
+--  --------  -------  --------
+1   New York  London   415
+2   New York  London   415
+4   Tepa      Rosario  160
+
+
+SELECT * FROM flights WHERE destino LIKE '%i%';
+3|Actopan|Ixmi|30
+4|Tepa|Rosario|160 
+
+'%i%' esto especifica si hay una i no importa cuantos caracteres hay antes y despues por los signos de porcentaje
