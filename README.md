@@ -14,34 +14,50 @@ _____________________________________________________________
 *PostgreSQL
 _____________________________________________________________
     Tiene una amplia variedad de tipos de datos que soporta
+_____________________________________________________________
+
+
     *CHAR(size)
     _________________________________________________________
         Un limitado numero de caracteres que puedes especificar
+
+
     *VARCHAR(size)
     _________________________________________________________
         Con este tipo de dato puedes especificar un rango del tamaño de caracteres que vas a usar
+
+
     *SMALLINT(size)
     _________________________________________________________
         Para un numero pequeño
+
+
     *INT
     _________________________________________________________
         Para un numero mediano
+
+
     *BIGINT
     _________________________________________________________
         Para un numero demasiado grande
+
+
     *FLOAT
     _________________________________________________________
         Para numeros decimales 
+
+
     *DOUBLE
     _________________________________________________________
         Numeros decimales mas 
 _____________________________________________________________
+
 *SQLite
 _____________________________________________________________
     Tiene una lista corta de tipos de datos que soporta
 _____________________________________________________________
 
-    
+
     *TEXT
     _________________________________________________________
         texto simple, Strings
