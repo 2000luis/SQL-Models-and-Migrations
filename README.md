@@ -7,34 +7,53 @@ Con carpetas en los directorios que tengan espacio se usa un guion y no se usan 
 DATA
 -------------------------------------------------------------
 Database Management Systems
+_____________________________________________________________
+
 *MySQL
+_____________________________________________________________
 *PostgreSQL
+_____________________________________________________________
     Tiene una amplia variedad de tipos de datos que soporta
     *CHAR(size)
+    _________________________________________________________
         Un limitado numero de caracteres que puedes especificar
     *VARCHAR(size)
+    _________________________________________________________
         Con este tipo de dato puedes especificar un rango del tamaño de caracteres que vas a usar
     *SMALLINT(size)
+    _________________________________________________________
         Para un numero pequeño
     *INT
+    _________________________________________________________
         Para un numero mediano
     *BIGINT
+    _________________________________________________________
         Para un numero demasiado grande
     *FLOAT
+    _________________________________________________________
         Para numeros decimales 
     *DOUBLE
+    _________________________________________________________
         Numeros decimales mas 
+_____________________________________________________________
 *SQLite
+_____________________________________________________________
     Tiene una lista corta de tipos de datos que soporta
+    _________________________________________________________
     *TEXT
+    _________________________________________________________
         texto simple, Strings
     *NUMERIC
+    _________________________________________________________
         boolean operaciones
     *INTEGER
+    _________________________________________________________
         Cualquier numero entero mas los numeros negativos
     *REAL
+    _________________________________________________________
         numeros decimales
     *BLOB
+    _________________________________________________________
         Cualquier numero binario que con tenga 0s y 1s que podria ser musica, fotos, videos, etc.
 _____________________________________________________________
 
@@ -63,12 +82,42 @@ _____________________________________________________________
 Constraints
 -------------------------------------------------------------
 *CHECK
+_____________________________________________________________
     revisar que se cumpla una cierta condicion
 *DEFAULT
+_____________________________________________________________
     agregar un valor por defecto
 *NOT NULL
+_____________________________________________________________
     Que el resultado no puede estar vacio
-*PRIMARY KEY 
+*PRIMARY KEY
+_____________________________________________________________ 
     Es para saber de que columna ubicar los elementos
 *UNIQUE
+_____________________________________________________________
     para asegurar que todos los valores sean unicos y que no alla repeticion
+_____________________________________________________________
+
+INSERT
+-------------------------------------------------------------
+<!-- Para insertar algo en la tabla se neesecita usar e commando INSERT INTO seguido de el nombre de la tabla. -->
+
+Despues especificaras entre parentesis el nombre de las columnas en las cuales se agregaran un elemento y el mismo orden en el que se encuentren, asi deberas agregar tu elementos con el argumento VALUES()
+_____________________________________________________________
+ INSERT INTO flights
+    (origin, destination, duration)
+    VALUES("New York", "London", 415)
+
+_____________________________________________________________
+
+<!-- Para seleccionar todo de la tabla se escribe -->
+SELECT * FROM flights;
+
+<!-- Para seleccionar solo las columnas necesarias -->
+SELECT origin, destination FROM flights;
+
+<!-- Para seleccionar solo una fila de la tabla -->
+SELECT * FROM flights WHERE     id = 3;
+
+<!-- Para buscar el elemento de una columna con un cierto nombre-->
+SELECT * FROM flights WHERE origin = "New York";
