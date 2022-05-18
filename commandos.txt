@@ -48,3 +48,4 @@ SELECT * FROM flights WHERE destino LIKE '%i%';
 4|Tepa|Rosario|160 
 
 '%i%' esto especifica si hay una i no importa cuantos caracteres hay antes y despues por los signos de porcentaje
+

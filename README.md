@@ -148,3 +148,113 @@ SELECT * FROM flights WHERE     id = 3;
 
 <!-- Para buscar el elemento de una columna con un cierto nombre-->
 SELECT * FROM flights WHERE origin = "New York";
+_____________________________________________________________
+
+Funciones
+-------------------------------------------------------------
+
+    *AVERAGE
+    _____________________________________________________________
+    Encontrar un porcentaje de alguna categoria
+
+    *COUNT
+    _____________________________________________________________
+    Puedes contar ciertos elementos 
+    
+    *MAX
+    _____________________________________________________________
+    Encontrar el maximo de algo
+    
+    *MIN
+    _____________________________________________________________
+    Encontrar el minimo de algo
+    
+    *SUM
+    _____________________________________________________________
+    Puedes sumar distintos elementos
+    
+_____________________________________________________________
+
+UPDATED
+-------------------------------------------------------------
+El commando UPDATE especifica que quieres actualizar un elemento, despues agregas el nombre del elemento que quisieras actualizar, de ahi especificas que elemento se va a actualizar con SET enseguida el nombre de el elemento que se va actualizar y las condiciones que deben cumplir los elementos para ser actualizados
+_____________________________________________________________
+
+UPDATE flights
+    SET duracion = 400
+    WHERE origin = 'New York'
+    AND destino = 'London';
+_____________________________________________________________
+
+SELECT * FROM flights;
+id  origin    destino  duracion
+--  --------  -------  --------
+1   New York  London   415
+2   New York  London   415
+3   Actopan   Ixmi     30
+4   Tepa      Rosario  160
+_____________________________________________________________
+
+UPDATE flights
+SET duracion = 400
+WHERE origin = 'New York'
+AND destino = 'London';
+SELECT * FROM flights;
+
+_____________________________________________________________
+Este es el cambio
+_____________________________________________________________
+id  origin    destino  duracion
+--  --------  -------  --------
+1   New York  London   400
+2   New York  London   400
+3   Actopan   Ixmi     30
+4   Tepa      Rosario  160
+_____________________________________________________________
+
+DELETE
+-------------------------------------------------------------
+
+DELETE FROM flights WHERE destino = 'Rosario';
+
+Other Clauses
+
+-------------------------------------------------------------
+    *Limit
+    _____________________________________________________________
+        SELECT * FROM LIMIT 3
+    
+    *ORDER BY
+    _____________________________________________________________
+        SELECT * FROM ORDER BY destino
+    
+    *GROUP BY
+    _____________________________________________________________
+        SELECT * FROM GROUP BY origin
+    
+    *HAVING
+    _____________________________________________________________
+        SELECT * FROM GROUP BY origin HAVING COUNT 3    
+
+JOIN
+----------------------------------------------------------------
+
+Se especifica cuales son los elementos de cada tabla
+que se va a tomar en cuanta despues se dice de con de son esos elementos con From despues Con JOIN especificas con que otra tabla lo quieres juntar
+Y ahora con ON Se especifica co cuales se van a juntar 
+_____________________________________________________________
+SELECT first, origin, destino
+FROM flights JOIN passengers
+ON passengers.flight_id = flights.id;
+_____________________________________________________________
+
+    *JOIN / INNER JOIN 
+    *LEFT OUTER JOIN
+    *RIGHT OUTER JOIN
+    *FULL OUTER JOIN
+
+CREATE INDEX
+----------------------------------------------------------------
+
+CREATE INDEX name_index ON passengers (last);
+
